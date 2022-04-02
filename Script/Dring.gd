@@ -1,6 +1,6 @@
 extends Area2D
 
-var is_active:=true
+var is_active:=false
 
 # Declare member variables here. Examples:
 # var a: int = 2

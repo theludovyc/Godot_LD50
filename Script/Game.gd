@@ -12,10 +12,13 @@ onready var hud = $HUD
 # var a: int = 2
 # var b: String = "text"
 
+func next_dring():
+	dring = drings.get_child(dring_index)
+	dring.is_active = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	dring = drings.get_child(dring_index)
+	next_dring()
 	
 	prints(name, "Hello, World !")
 	pass # Replace with function body.
@@ -42,4 +45,4 @@ func _on_Player_disable_dring() -> void:
 		prints(name, "win o/")
 		pass
 	else:
-		dring = drings.get_child(dring_index)
+		next_dring()
