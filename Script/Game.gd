@@ -42,7 +42,6 @@ func _on_Player_disable_dring() -> void:
 	dring_index += 1
 	
 	if dring_index >= drings.get_child_count():
-		prints(name, "win o/")
-		pass
+		get_tree().change_scene("res://Scene/Win.tscn")
 	else:
 		next_dring()
