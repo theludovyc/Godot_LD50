@@ -14,6 +14,9 @@ var vel:Vector2
 var want_jump := false
 
 onready var label = $Label
+onready var sprite = $Sprite
+onready var anim_tree = $AnimationTree
+onready var anim_playback = anim_tree.get("parameters/playback")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,6 +27,18 @@ func _process(delta: float) -> void:
 	want_jump = Input.is_action_just_pressed("ui_up")
 		
 	dir_x = Input.get_axis("ui_left", "ui_right")
+	
+	if dir_x > 0:
+		sprite.flip_h = false
+	elif dir_x < 0:
+		sprite.flip_h = true
+	
+	anim_tree["parameters/conditions/is_running"] = dir_x != 0
+	anim_tree["parameters/conditions/is_not_running"] = dir_x == 0
+	
+	anim_tree["parameters/conditions/is_falling"] = !is_on_floor()
+		
+	anim_tree["parameters/conditions/is_on_floor"] = is_on_floor()
 
 func get_speed_x() -> float:
 	if dir_x != 0:
