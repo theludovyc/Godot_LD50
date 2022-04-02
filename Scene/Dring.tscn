@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Art/reveil_centre-01-01.png" type="Texture" id=1]
 [ext_resource path="res://Script/Dring.gd" type="Script" id=2]
@@ -8,6 +8,53 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 22, 22 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Dring"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2 ]
+}
 
 [node name="Dring" type="Area2D" groups=["Dring"]]
 collision_layer = 2
@@ -35,7 +82,13 @@ centered = false
 offset = Vector2( -4.5, -12 )
 
 [node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 0, 3 )
 texture = ExtResource( 5 )
 hframes = 2
 vframes = 2
 frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Dring = SubResource( 4 )
+anims/Idle = SubResource( 2 )
+anims/RESET = SubResource( 3 )
