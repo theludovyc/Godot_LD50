@@ -48,6 +48,10 @@ config/name="LD50"
 run/main_scene="res://Scene/Game.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Saver="*res://Script/Saver.gd"
+
 [display]
 
 window/size/width=1280

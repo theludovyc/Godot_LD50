@@ -40,8 +40,6 @@ func get_real_visible_rect():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	hud.update_dring_arrow(player.position.distance_to(dring.position), player.position.direction_to(dring.position).normalized())
-	
-#	pass
 
 
 func _on_Player_disable_dring() -> void:
@@ -51,6 +49,8 @@ func _on_Player_disable_dring() -> void:
 		dring.do_idle()
 	
 	dring_index += 1
+	
+	Saver.dring_count += 1
 	
 	if dring_index >= drings.get_child_count():
 		get_tree().change_scene("res://Scene/Win.tscn")
