@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/perso-01.png-1d4aa9c599ae22e080a9fc733c88d513.stex"
+path="res://.import/reveil_centre-01-01.png-00fdad52809ef04133118b2576aee0f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/perso-01.png"
-dest_files=[ "res://.import/perso-01.png-1d4aa9c599ae22e080a9fc733c88d513.stex" ]
+source_file="res://Art/reveil_centre-01-01.png"
+dest_files=[ "res://.import/reveil_centre-01-01.png-00fdad52809ef04133118b2576aee0f1.stex" ]
 
 [params]
 

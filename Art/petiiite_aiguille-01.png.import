@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/perso-01.png-1d4aa9c599ae22e080a9fc733c88d513.stex"
+path="res://.import/petiiite_aiguille-01.png-98025327322ebbfd914d2044a6e1e80d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/perso-01.png"
-dest_files=[ "res://.import/perso-01.png-1d4aa9c599ae22e080a9fc733c88d513.stex" ]
+source_file="res://Art/petiiite_aiguille-01.png"
+dest_files=[ "res://.import/petiiite_aiguille-01.png-98025327322ebbfd914d2044a6e1e80d.stex" ]
 
 [params]
 
