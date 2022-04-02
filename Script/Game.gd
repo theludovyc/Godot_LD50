@@ -26,6 +26,8 @@ func next_dring():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Saver.dring_count = drings.get_child_count()
+	
 	next_dring()
 	pass # Replace with function body.
 
@@ -50,7 +52,7 @@ func _on_Player_disable_dring() -> void:
 	
 	dring_index += 1
 	
-	Saver.dring_count += 1
+	Saver.dring_counter += 1
 	
 	if dring_index >= drings.get_child_count():
 		get_tree().change_scene("res://Scene/Win.tscn")
