@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/autotile_2x2_dirt.png-3837c379601e1e8c721a477407eebc31.stex"
+path="res://.import/autotile.png-3eb1083513c6c03c7b7811bdb0283b15.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/autotile_2x2_dirt.png"
-dest_files=[ "res://.import/autotile_2x2_dirt.png-3837c379601e1e8c721a477407eebc31.stex" ]
+source_file="res://Art/autotile.png"
+dest_files=[ "res://.import/autotile.png-3eb1083513c6c03c7b7811bdb0283b15.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

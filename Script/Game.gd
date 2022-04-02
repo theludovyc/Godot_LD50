@@ -41,7 +41,11 @@ func get_real_visible_rect():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	hud.update_dring_arrow(player.position.distance_to(dring.position), player.position.direction_to(dring.position).normalized())
+	hud.update_dring_arrow(
+			camera.global_position - player.global_position,
+			player.position.direction_to(dring.position).normalized(),
+			player.global_position.distance_to(dring.global_position)
+		)
 
 
 func _on_Player_disable_dring() -> void:
