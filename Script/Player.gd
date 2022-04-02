@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal disable_dring
+
 const Max_Speed = 300
 const Move_Speed = Max_Speed * 0.5
 const Stop_Speed = Max_Speed * 0.3
@@ -42,3 +44,9 @@ func _physics_process(delta: float) -> void:
 	label.text = str(vel)
 	
 	vel = move_and_slide(vel, Vector2.UP)
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Dring"):
+		area.is_active = false
+		emit_signal("disable_dring")
+	pass # Replace with function body.
