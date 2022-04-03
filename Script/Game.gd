@@ -11,7 +11,7 @@ var on_dring := false
 onready var player = $Player
 onready var camera = $Player/Camera2D
 onready var drings = $Drings
-onready var hud = $HUD
+onready var dring_arrow = $Player/Camera2D/DringArrow
 onready var timer = $Timer
 
 # Declare member variables here. Examples:
@@ -41,11 +41,10 @@ func get_real_visible_rect():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	hud.update_dring_arrow(
-			camera.global_position - player.global_position,
-			player.position.direction_to(dring.position).normalized(),
-			player.global_position.distance_to(dring.global_position)
-		)
+	dring_arrow.do_update(
+		player.position.direction_to(dring.position).normalized(),
+		player.global_position.distance_to(dring.global_position)
+	)
 
 
 func _on_Player_disable_dring() -> void:

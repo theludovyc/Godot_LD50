@@ -5,7 +5,7 @@
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Dring.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Script/HUD.gd" type="Script" id=6]
+[ext_resource path="res://Script/DringArrow.gd" type="Script" id=6]
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
@@ -21,7 +21,7 @@ format = 1
 tile_data = PoolIntArray( 2, 5, 0, 7, 5, 0, 12, 5, 0, 17, 5, 0, 20, 5, 0, 27, 5, 0, 34, 5, 0, 41, 5, 0, 196652, 4, 0, 262172, 4, 0, 393220, 4, 0, 393224, 4, 0, 393228, 4, 0, 393232, 4, 0, 393240, 4, 0, 458779, 4, 0, 458783, 4, 0, 458788, 5, 0, 458791, 5, 0, 655362, 5, 0, 655397, 4, 0, 786458, 5, 0, 851997, 4, 0, 852010, 5, 0, 917509, 4, 0, 917513, 4, 0, 917517, 4, 0, 1048598, 4, 0, 1245185, 4, 0, 1245218, 4, 0, 1376261, 4, 0, 1376265, 4, 0, 1376269, 4, 0, 1376273, 4, 0, 1376277, 4, 0, 1376293, 4, 0, 1376296, 4, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2203, 1170 )
+position = Vector2( 2212, 1164 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
@@ -31,6 +31,13 @@ limit_top = 0
 limit_right = 2944
 limit_bottom = 1408
 smoothing_enabled = true
+
+[node name="DringArrow" type="TextureRect" parent="Player/Camera2D"]
+modulate = Color( 0.470588, 0.27451, 0.27451, 1 )
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 4 )
+script = ExtResource( 6 )
 
 [node name="Drings" type="Node" parent="."]
 
@@ -64,15 +71,6 @@ position = Vector2( 96, 168 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0
 one_shot = true
-
-[node name="HUD" type="CanvasLayer" parent="."]
-script = ExtResource( 6 )
-
-[node name="DringArrow" type="TextureRect" parent="HUD"]
-modulate = Color( 0.470588, 0.27451, 0.27451, 1 )
-margin_right = 64.0
-margin_bottom = 64.0
-texture = ExtResource( 4 )
 
 [connection signal="disable_dring" from="Player" to="." method="_on_Player_disable_dring"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
