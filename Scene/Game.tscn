@@ -33,25 +33,6 @@ tile_set = ExtResource( 8 )
 format = 1
 tile_data = PoolIntArray( 131077, 2, 0, 131086, 4, 0, 131110, 2, 0, 196636, 0, 0, 262179, 4, 0, 327683, 1, 0, 327684, 0, 0, 327688, 4, 0, 327692, 2, 0, 327693, 3, 0, 327697, 1, 0, 327698, 4, 0, 327704, 3, 0, 327705, 1, 0, 393244, 4, 0, 393245, 2, 0, 393246, 3, 0, 589837, 3, 0, 655400, 1, 0, 720920, 4, 0, 851972, 2, 0, 851973, 4, 0, 851979, 1, 0, 851980, 0, 0, 917525, 0, 0, 917545, 4, 0, 983062, 2, 0, 1048586, 3, 0, 1114142, 4, 0, 1114143, 1, 0, 1179649, 1, 0, 1179667, 1, 0, 1179681, 0, 0, 1179682, 2, 0, 1179688, 4, 0, 1310727, 0, 0, 1310728, 2, 0, 1310729, 4, 0, 1310735, 0, 0, 1310744, 4, 0, 1310745, 2, 0 )
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2410, 1139 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-zoom = Vector2( 0.75, 0.75 )
-limit_left = 0
-limit_top = 0
-limit_right = 2944
-limit_bottom = 1408
-smoothing_enabled = true
-
-[node name="DringArrow" type="Sprite" parent="Player/Camera2D"]
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 4 )
-centered = false
-offset = Vector2( -150, 0 )
-script = ExtResource( 6 )
-
 [node name="Drings" type="Node" parent="."]
 
 [node name="Dring9" parent="Drings" instance=ExtResource( 5 )]
@@ -80,6 +61,25 @@ position = Vector2( 1472, 169 )
 
 [node name="Dring8" parent="Drings" instance=ExtResource( 5 )]
 position = Vector2( 96, 168 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2410, 1139 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 0.75, 0.75 )
+limit_left = 0
+limit_top = 0
+limit_right = 2944
+limit_bottom = 1408
+smoothing_enabled = true
+
+[node name="DringArrow" type="Sprite" parent="Player/Camera2D"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( -150, 0 )
+script = ExtResource( 6 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0
