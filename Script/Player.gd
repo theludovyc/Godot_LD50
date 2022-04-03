@@ -23,7 +23,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	want_jump = Input.is_action_just_pressed("ui_up")
+	want_jump = Input.is_action_just_pressed("ui_select")
 		
 	dir_x = Input.get_axis("ui_left", "ui_right")
 	
