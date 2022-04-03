@@ -3,7 +3,7 @@
 [ext_resource path="res://Script/Game.gd" type="Script" id=1]
 [ext_resource path="res://Art/new_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Art/fleche-01.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Dring.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Script/DringArrow.gd" type="Script" id=6]
 
@@ -32,11 +32,11 @@ limit_right = 2944
 limit_bottom = 1408
 smoothing_enabled = true
 
-[node name="DringArrow" type="TextureRect" parent="Player/Camera2D"]
-modulate = Color( 0.470588, 0.27451, 0.27451, 1 )
-margin_right = 64.0
-margin_bottom = 64.0
+[node name="DringArrow" type="Sprite" parent="Player/Camera2D"]
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
+centered = false
+offset = Vector2( -150, 0 )
 script = ExtResource( 6 )
 
 [node name="Drings" type="Node" parent="."]
