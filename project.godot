@@ -53,6 +53,10 @@ config/icon="res://icon.png"
 Saver="*res://Script/Saver.gd"
 MusicManager="*res://Scene/MusicManager.tscn"
 
+[debug]
+
+settings/fps/force_fps=60
+
 [display]
 
 window/size/width=1280
