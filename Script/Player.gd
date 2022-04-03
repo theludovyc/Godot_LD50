@@ -13,7 +13,6 @@ var vel:Vector2
 
 var want_jump := false
 
-onready var label = $Label
 onready var sprite = $Sprite
 onready var anim_tree = $AnimationTree
 onready var anim_playback = anim_tree.get("parameters/playback")
@@ -55,8 +54,6 @@ func _physics_process(delta: float) -> void:
 			vel.y -= JUMP
 	else:
 		vel.y += Gravity
-	
-	label.text = str(vel)
 	
 	vel = move_and_slide(vel, Vector2.UP)
 
