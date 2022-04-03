@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Script/Game.gd" type="Script" id=1]
 [ext_resource path="res://Art/new_tileset.tres" type="TileSet" id=2]
@@ -6,9 +6,16 @@
 [ext_resource path="res://Art/fleche-01.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Dring.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Script/DringArrow.gd" type="Script" id=6]
+[ext_resource path="res://Art/background_game.png" type="Texture" id=7]
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+texture = ExtResource( 7 )
+centered = false
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
