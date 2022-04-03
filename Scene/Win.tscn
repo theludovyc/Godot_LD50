@@ -35,6 +35,6 @@ margin_left = 101.0
 margin_top = 166.0
 margin_right = 331.0
 margin_bottom = 206.0
-text = "Recommencer"
+text = "Try Again"
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
