@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Art/Sound/Kim Lightyear - Magic Tales (Dear Diary Loop).mp3" type="AudioStream" id=1]
+
+[node name="MusicManager" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.0
+autoplay = true

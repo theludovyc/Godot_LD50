@@ -5,10 +5,23 @@ var is_active:=false
 onready var petite = $Petite
 onready var grande = $Grande
 onready var anim_player = $AnimationPlayer
+onready var audio = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
+
+func do_active():
+	is_active = true
+	
+	audio.play()
+	
+func do_disabled():
+	is_active = false
+	
+	do_idle()
+	
+	audio.stop()
 
 func do_dring():
 	anim_player.play("Dring")

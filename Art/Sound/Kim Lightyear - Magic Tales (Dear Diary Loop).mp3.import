@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Kim Lightyear - Magic Tales (Dear Diary Loop).mp3-7cc0369f05f8a4538266e5290c17904e.mp3str"
+
+[deps]
+
+source_file="res://Art/Sound/Kim Lightyear - Magic Tales (Dear Diary Loop).mp3"
+dest_files=[ "res://.import/Kim Lightyear - Magic Tales (Dear Diary Loop).mp3-7cc0369f05f8a4538266e5290c17904e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

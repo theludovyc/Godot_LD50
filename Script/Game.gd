@@ -20,7 +20,7 @@ onready var timer = $Timer
 
 func next_dring():
 	dring = drings.get_child(dring_index)
-	dring.is_active = true
+	dring.do_active()
 	
 	timer.start(timeout)
 
@@ -51,7 +51,7 @@ func _on_Player_disable_dring() -> void:
 	if on_dring:
 		on_dring = false
 		
-		dring.do_idle()
+	dring.do_disabled()
 	
 	dring_index += 1
 	
