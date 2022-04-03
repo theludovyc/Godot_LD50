@@ -1,7 +1,7 @@
 extends Node
 
-const timeout = 30
-const dring_time = 5
+const timeout = 27
+const dring_time = 8
 
 var dring:Node2D
 var dring_index := 0

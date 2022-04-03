@@ -1,5 +1,7 @@
 extends Area2D
 
+var dring_sound = preload("res://Art/Sound/alarm_clock_5.mp3")
+
 var is_active:=false
 
 onready var petite = $Petite
@@ -25,6 +27,10 @@ func do_disabled():
 
 func do_dring():
 	anim_player.play("Dring")
+	
+	audio.stream = dring_sound
+	
+	audio.play()
 	
 func do_idle():
 	anim_player.play("Idle")
