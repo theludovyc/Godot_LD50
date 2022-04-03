@@ -8,7 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Label.text = "Vous avez désactivé " + str(Saver.dring_counter) + " sur " + str(Saver.dring_count) + " alarmes !"
+	$Label.text = "Vous avez desactive " + str(Saver.dring_counter) + " reveils sur " + str(Saver.dring_count) + " !"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
