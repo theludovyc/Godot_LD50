@@ -1,6 +1,6 @@
 extends Node
 
-const timeout = 27
+const timeout = 1
 const dring_time = 8
 
 var dring:Node2D
@@ -58,14 +58,14 @@ func _on_Player_disable_dring() -> void:
 	Saver.dring_counter += 1
 	
 	if dring_index >= drings.get_child_count():
-		get_tree().change_scene("res://Scene/Win.tscn")
+		Manager.change_scene("res://Scene/Win.tscn")
 	else:
 		next_dring()
 
 
 func _on_Timer_timeout() -> void:
 	if on_dring:
-		get_tree().change_scene("res://Scene/Win.tscn")
+		Manager.change_scene("res://Scene/Win.tscn")
 	else:
 		dring.do_dring()
 		

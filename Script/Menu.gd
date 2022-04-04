@@ -17,4 +17,4 @@ func _ready() -> void:
 
 
 func _on_Button_pressed() -> void:
-	get_tree().change_scene("res://Scene/Game.tscn")
+	Manager.change_scene("res://Scene/Game.tscn")

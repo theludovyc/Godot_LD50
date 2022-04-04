@@ -11,5 +11,5 @@ dest_files=[ "res://.import/alarm_clock_5.mp3-f316a7455072d2c69e3c1aa8252e32f9.m
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

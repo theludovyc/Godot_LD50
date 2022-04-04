@@ -51,7 +51,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Saver="*res://Script/Saver.gd"
-MusicManager="*res://Scene/MusicManager.tscn"
+Manager="*res://Scene/Manager.tscn"
 
 [debug]
 
@@ -89,6 +89,10 @@ texture={
 "size_limit": 0,
 "stream": false,
 "svg/scale": 1.0
+}
+mp3={
+"loop": false,
+"loop_offset": 0
 }
 
 [physics]
