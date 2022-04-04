@@ -1,6 +1,6 @@
 extends Node
 
-const timeout = 1
+const timeout = 27
 const dring_time = 8
 
 var dring:Node2D
